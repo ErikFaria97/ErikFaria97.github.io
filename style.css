@@ -1,0 +1,18 @@
+/* FONT IMPORT HERE */
+
+:root {
+    --test: small;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basic alignment */
+.mid {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
