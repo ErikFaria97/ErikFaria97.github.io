@@ -1,11 +1,18 @@
-/* FONT IMPORT HERE */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --test: small;
+    /* Color palette */
+    --textColor: black;
+    --textHoverColor: white;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 /* Basic alignment */
@@ -19,7 +26,7 @@ html {
 
 /* Nav element */
 nav {
-    position: absolute;
+    position: fixed;
     top:0;
     left:0;
     background-color: red;
@@ -27,6 +34,10 @@ nav {
     height: 32px;
 
     display: flex;
+}
+
+nav a {
+    text-decoration: none;
 }
 
 img#nav-logo {
@@ -39,10 +50,33 @@ img#nav-logo {
 ul#nav-list {
     list-style: none;
     display: inline-flex;
-    gap: 16px;
+    gap: 12px;
 
     margin-top: auto;
     margin-bottom: auto;
 
-    padding-left: 16px;
+    padding-left: 12px;
+}
+
+/* Text elements */
+* {
+    font-family: "Noto Serif", serif;
+}
+
+a {
+    color: var(--textColor);
+
+    padding-left:2px;
+    padding-right:2px;
+
+    transition: color 0.2s, background-color 0.2s, transform 0.2s;
+
+    display: inline-block;
+}
+
+a:hover {
+    background-color: var(--textColor);
+    color: var(--textHoverColor);
+
+    transform: skew(15deg, 0);
 }
