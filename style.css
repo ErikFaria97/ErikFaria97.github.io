@@ -16,3 +16,31 @@ html {
 .right {
     text-align: right;
 }
+
+/* Nav element */
+nav {
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: red;
+    width: 100%;
+
+    display: flex;
+}
+
+img#nav-logo {
+    max-height: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left:12px;
+}
+
+ul#nav-list {
+    list-style: none;
+    display: inline-flex;
+    gap: 16px;
+
+    font-size: larger;
+    margin-top: auto;
+    margin-bottom: auto;
+}
