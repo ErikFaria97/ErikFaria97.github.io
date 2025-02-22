@@ -4,6 +4,10 @@
     /* Color palette */
     --textColor: black;
     --textHoverColor: white;
+
+    --headerColour: rgba(255,255,255,0.75);
+
+    --headerHeight: 350px;
 }
 
 html {
@@ -29,9 +33,11 @@ nav {
     position: fixed;
     top:0;
     left:0;
-    background-color: red;
+    background-color: var(--headerColour);
     width: 100%;
     height: 32px;
+
+    backdrop-filter: blur(5px);
 
     display: flex;
 }
@@ -69,9 +75,9 @@ a {
     padding-left:2px;
     padding-right:2px;
 
-    transition: color 0.2s, background-color 0.2s, transform 0.2s;
-
     display: inline-block;
+
+    transition: color 0.2s, background-color 0.2s, transform 0.2s;
 }
 
 a:hover {
@@ -79,4 +85,41 @@ a:hover {
     color: var(--textHoverColor);
 
     transform: skew(15deg, 0);
+}
+
+/* Image elements */
+.widephoto {
+    width: calc(100% - 16px);
+    background-image: url("images/header.jpg");
+    height: var(--headerHeight);
+    overflow-y: hidden;
+
+    background-position: center;
+    align-content: center;
+
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.widephoto p, .widephoto h1 {
+    display: block;
+}
+
+.widephoto * {
+    text-align: center;
+    color: white;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 800px) {
+    :root {
+        --headerHeight: 100svh;
+        --headerColour: white;
+    }
+
+    img#nav-logo {
+        display: none;
+    }
+
 }
